@@ -6,51 +6,57 @@
 # Check https://github.com/PyCampES/python-docs-es/blob/3.8/TRANSLATORS to
 # get the list of volunteers
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-05 12:54+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2020-05-18 12:27-0500\n"
 "Language-Team: python-doc-es\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #: ../Doc/library/logging.rst:2
 msgid ":mod:`logging` --- Logging facility for Python"
-msgstr ""
+msgstr ":mod:`logging` --- Instalación de registradores para Python"
 
 #: ../Doc/library/logging.rst:10
 msgid "**Source code:** :source:`Lib/logging/__init__.py`"
-msgstr ""
+msgstr "**Source code:** :source:`Lib/logging/__init__.py`"
 
 #: ../Doc/library/logging.rst:16
 msgid ""
 "This page contains the API reference information. For tutorial information "
 "and discussion of more advanced topics, see"
 msgstr ""
+"Esta página contiene la información de referencia de la API. Para "
+"información sobre tutorial y discusión de temas más avanzados, ver"
 
 #: ../Doc/library/logging.rst:19
 msgid ":ref:`Basic Tutorial <logging-basic-tutorial>`"
-msgstr ""
+msgstr ":ref:`Basic Tutorial <logging-basic-tutorial>`"
 
 #: ../Doc/library/logging.rst:20
 msgid ":ref:`Advanced Tutorial <logging-advanced-tutorial>`"
-msgstr ""
+msgstr ":ref:`Advanced Tutorial <logging-advanced-tutorial>`"
 
 #: ../Doc/library/logging.rst:21
 msgid ":ref:`Logging Cookbook <logging-cookbook>`"
-msgstr ""
+msgstr ":ref:`Logging Cookbook <logging-cookbook>`"
 
 #: ../Doc/library/logging.rst:25
 msgid ""
 "This module defines functions and classes which implement a flexible event "
 "logging system for applications and libraries."
 msgstr ""
+"Este módulo define funciones y clases que implementan un sistema flexible de "
+"registro de eventos para aplicaciones y bibliotecas."
 
 #: ../Doc/library/logging.rst:28
 msgid ""
@@ -59,6 +65,10 @@ msgid ""
 "application log can include your own messages integrated with messages from "
 "third-party modules."
 msgstr ""
+"El beneficio clave de tener la API de registro proporcionada por un módulo "
+"de biblioteca estándar es que todos los módulos de Python pueden participar "
+"en el registro, por lo que el registro de su aplicación puede incluir sus "
+"propios mensajes integrados con mensajes de módulos de terceros."
 
 #: ../Doc/library/logging.rst:33
 msgid ""
@@ -66,28 +76,39 @@ msgid ""
 "unfamiliar with logging, the best way to get to grips with it is to see the "
 "tutorials (see the links on the right)."
 msgstr ""
+"El módulo proporciona mucha funcionalidad y flexibilidad. Si no está "
+"familiarizado con el registro, la mejor manera de familiarizarse con él es "
+"ver los tutoriales (ver los enlaces a la derecha)."
 
 #: ../Doc/library/logging.rst:37
 msgid ""
 "The basic classes defined by the module, together with their functions, are "
 "listed below."
 msgstr ""
+"Las clases básicas definidas por el módulo, junto con sus funciones, se "
+"enumeran a continuación."
 
 #: ../Doc/library/logging.rst:40
 msgid "Loggers expose the interface that application code directly uses."
 msgstr ""
+"Los registradores exponen la interfaz que el código de la aplicación usa "
+"directamente."
 
 #: ../Doc/library/logging.rst:41
 msgid ""
 "Handlers send the log records (created by loggers) to the appropriate "
 "destination."
 msgstr ""
+"Los controladores envían los registros (creados por los registradores) al "
+"destino apropiado."
 
 #: ../Doc/library/logging.rst:43
 msgid ""
 "Filters provide a finer grained facility for determining which log records "
 "to output."
 msgstr ""
+"Los filtros proporcionan una facilidad de ajuste preciso para determinar que "
+"registros generar."
 
 #: ../Doc/library/logging.rst:45
 msgid "Formatters specify the layout of log records in the final output."
