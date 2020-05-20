@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-05 12:54+0200\n"
-"PO-Revision-Date: 2020-05-20 11:47-0500\n"
+"PO-Revision-Date: 2020-05-20 12:05-0500\n"
 "Language-Team: python-doc-es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -737,7 +737,7 @@ msgstr "0"
 
 #: ../Doc/library/logging.rst:387
 msgid "Handler Objects"
-msgstr ""
+msgstr "Manejador de objetos"
 
 #: ../Doc/library/logging.rst:389
 msgid ""
@@ -746,6 +746,10 @@ msgid ""
 "useful subclasses. However, the :meth:`__init__` method in subclasses needs "
 "to call :meth:`Handler.__init__`."
 msgstr ""
+"Los manejadores tienen los siguientes atributos y métodos. Tenga en cuenta "
+"que :class:`Handler` nunca se instancia directamente; Esta clase actúa como "
+"base para subclases más útiles. Sin embargo, el método :meth:`__init__` en "
+"las subclases debe llamar a :meth:`Handler.__init__`."
 
 #: ../Doc/library/logging.rst:398
 msgid ""
@@ -753,20 +757,26 @@ msgid ""
 "list of filters to the empty list and creating a lock (using :meth:"
 "`createLock`) for serializing access to an I/O mechanism."
 msgstr ""
+"Inicializa la instancia :class:`Handler` estableciendo su nivel, "
+"configurando la lista de filtros en la lista vacía y creando un bloqueo "
+"(usando :meth:`createLock`) para serializar el acceso a un mecanismo de E/S."
 
 #: ../Doc/library/logging.rst:405
 msgid ""
 "Initializes a thread lock which can be used to serialize access to "
 "underlying I/O functionality which may not be threadsafe."
 msgstr ""
+"Inicializa un bloqueo de subprocesos que se puede utilizar para serializar "
+"el acceso a la funcionalidad de E/S subyacente que puede no ser segura para "
+"subprocesos."
 
 #: ../Doc/library/logging.rst:411
 msgid "Acquires the thread lock created with :meth:`createLock`."
-msgstr ""
+msgstr "Adquiere el bloqueo de hilo creado con :meth:`createLock`."
 
 #: ../Doc/library/logging.rst:416
 msgid "Releases the thread lock acquired with :meth:`acquire`."
-msgstr ""
+msgstr "Libera el bloqueo de hilo adquirido con :meth:`acquire`."
 
 #: ../Doc/library/logging.rst:421
 msgid ""
@@ -774,24 +784,30 @@ msgid ""
 "less severe than *level* will be ignored. When a handler is created, the "
 "level is set to :const:`NOTSET` (which causes all messages to be processed)."
 msgstr ""
+"Establece el umbral para este controlador en ``level``. Los mensajes de "
+"registro que son menos severos que ``level`` serán ignorados. Cuando se crea "
+"un controlador, el nivel se establece en :const:`NOTSET` (lo que hace que se "
+"procesen todos los mensajes)."
 
 #: ../Doc/library/logging.rst:428
 msgid ""
 "The *level* parameter now accepts a string representation of the level such "
 "as 'INFO' as an alternative to the integer constants such as :const:`INFO`."
 msgstr ""
+"El parámetro ``level`` ahora acepta una representación de cadena del nivel "
+"como 'INFO' como alternativa a las constantes de enteros como :const:`INFO`."
 
 #: ../Doc/library/logging.rst:436
 msgid "Sets the :class:`Formatter` for this handler to *fmt*."
-msgstr ""
+msgstr "Establece :class:`Formatter` para este controlador en ``fmt``."
 
 #: ../Doc/library/logging.rst:441
 msgid "Adds the specified filter *filter* to this handler."
-msgstr ""
+msgstr "Agrega el filtro ``filtro`` especificado a este controlador."
 
 #: ../Doc/library/logging.rst:446
 msgid "Removes the specified filter *filter* from this handler."
-msgstr ""
+msgstr "Elimina el filtro ``filtro`` especificado de este controlador."
 
 #: ../Doc/library/logging.rst:451
 msgid ""
