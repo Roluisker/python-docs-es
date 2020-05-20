@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-05 12:54+0200\n"
-"PO-Revision-Date: 2020-05-20 11:39-0500\n"
+"PO-Revision-Date: 2020-05-20 11:47-0500\n"
 "Language-Team: python-doc-es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -638,6 +638,8 @@ msgid ""
 "This is a factory method which can be overridden in subclasses to create "
 "specialized :class:`LogRecord` instances."
 msgstr ""
+"Este es un método *factory* que se puede *overridden* en subclases para "
+"crear instancias especializadas :class:`LogRecord`."
 
 #: ../Doc/library/logging.rst:344
 msgid ""
@@ -648,14 +650,20 @@ msgid ""
 "set to false is found - that will be the last logger which is checked for "
 "the existence of handlers."
 msgstr ""
+"Comprueba si este registrador tiene algún controlador configurado. Esto se "
+"hace buscando controladores en este registrador y sus padres en la jerarquía "
+"del registrador. Devuelve verdadero si se encontró un controlador, de lo "
+"contrario, falso. El método deja de buscar en la jerarquía cada vez que se "
+"encuentra un registrador con el atributo *propagate* establecido en falso: "
+"ese será el último registrador que verificará la existencia de controladores."
 
 #: ../Doc/library/logging.rst:353
 msgid "Loggers can now be pickled and unpickled."
-msgstr ""
+msgstr "Los registradores ahora se pueden ser *pickled and unpickled*."
 
 #: ../Doc/library/logging.rst:359
 msgid "Logging Levels"
-msgstr ""
+msgstr "Niveles de registro"
 
 #: ../Doc/library/logging.rst:361
 msgid ""
@@ -665,62 +673,67 @@ msgid ""
 "define a level with the same numeric value, it overwrites the predefined "
 "value; the predefined name is lost."
 msgstr ""
+"Los valores numéricos de los niveles de registro se dan en la siguiente "
+"tabla. Estos son principalmente de interés si desea definir sus propios "
+"niveles y necesita que tengan valores específicos en relación con los "
+"niveles predefinidos. Si define un nivel con el mismo valor numérico, "
+"sobrescribe el valor predefinido; Se pierde el nombre predefinido."
 
 #: ../Doc/library/logging.rst:368
 msgid "Level"
-msgstr ""
+msgstr "Nivel"
 
 #: ../Doc/library/logging.rst:368
 msgid "Numeric value"
-msgstr ""
+msgstr "Valor numérico"
 
 #: ../Doc/library/logging.rst:370
 msgid "``CRITICAL``"
-msgstr ""
+msgstr "``CRITICAL``"
 
 #: ../Doc/library/logging.rst:370
 msgid "50"
-msgstr ""
+msgstr "50"
 
 #: ../Doc/library/logging.rst:372
 msgid "``ERROR``"
-msgstr ""
+msgstr "``ERROR``"
 
 #: ../Doc/library/logging.rst:372
 msgid "40"
-msgstr ""
+msgstr "40"
 
 #: ../Doc/library/logging.rst:374
 msgid "``WARNING``"
-msgstr ""
+msgstr "``WARNING``"
 
 #: ../Doc/library/logging.rst:374
 msgid "30"
-msgstr ""
+msgstr "30"
 
 #: ../Doc/library/logging.rst:376
 msgid "``INFO``"
-msgstr ""
+msgstr "``INFO``"
 
 #: ../Doc/library/logging.rst:376
 msgid "20"
-msgstr ""
+msgstr "20"
 
 #: ../Doc/library/logging.rst:378
 msgid "``DEBUG``"
-msgstr ""
+msgstr "``DEBUG``"
 
 #: ../Doc/library/logging.rst:378
 msgid "10"
-msgstr ""
+msgstr "10"
 
 #: ../Doc/library/logging.rst:380
 msgid "``NOTSET``"
-msgstr ""
+msgstr "``NOTSET``"
 
 #: ../Doc/library/logging.rst:380
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../Doc/library/logging.rst:387
 msgid "Handler Objects"
