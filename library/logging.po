@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-05 12:54+0200\n"
-"PO-Revision-Date: 2020-05-20 10:46-0500\n"
+"PO-Revision-Date: 2020-05-20 11:15-0500\n"
 "Language-Team: python-doc-es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -423,7 +423,7 @@ msgstr ""
 "se puede utilizar en el registro de ayudantes para que el nombre de la "
 "función, el nombre de archivo y el número de línea registrados no sean la "
 "información para la función / método auxiliar, sino más bien su llamador. El "
-"nombre de este parámetro refleja el equivalente en el modulo  :mod:`warnings`"
+"nombre de este parámetro refleja el equivalente en el modulo :mod:`warnings`"
 
 #: ../Doc/library/logging.rst:200
 msgid ""
@@ -433,10 +433,15 @@ msgid ""
 "attributes can then be used as you like. For example, they could be "
 "incorporated into logged messages. For example::"
 msgstr ""
+"El cuarto argumento de palabra clave es ``extra``, que se puede usar para "
+"pasar un diccionario que se usa para completar el __dict__ de :class:"
+"`LogRecord` creado para el evento de registro con atributos definidos por el "
+"usuario. Estos atributos personalizados se pueden usar a su gusto. Podrían "
+"incorporarse en mensajes registrados. Por ejemplo::"
 
 #: ../Doc/library/logging.rst:212
 msgid "would print something like"
-msgstr ""
+msgstr "imprimiría algo como"
 
 #: ../Doc/library/logging.rst:218 ../Doc/library/logging.rst:997
 msgid ""
@@ -444,6 +449,10 @@ msgid ""
 "used by the logging system. (See the :class:`Formatter` documentation for "
 "more information on which keys are used by the logging system.)"
 msgstr ""
+"Las claves en el diccionario pasado ``extra`` no deben entrar en conflicto "
+"con las claves utilizadas por el sistema de registro. (Ver la documentación "
+"de :class:`Formatter` para obtener más información sobre qué claves utiliza "
+"el sistema de registro)."
 
 #: ../Doc/library/logging.rst:222
 msgid ""
@@ -455,6 +464,12 @@ msgid ""
 "exception will occur. So in this case, you always need to pass the *extra* "
 "dictionary with these keys."
 msgstr ""
+"Si elige usar estos atributos en los mensajes registrados, debe tener "
+"cuidado. En el ejemplo anterior, se ha configurado :class:`Formatter` con "
+"una cadena de formato que espera *clientip* y 'usuario' en el diccionario de "
+"atributos de :class:`LogRecord`. Si faltan, el mensaje no se registrará "
+"porque se producirá una excepción de formato de cadena. En este caso, "
+"siempre debe pasar el diccionario ``extra`` con estas teclas."
 
 #: ../Doc/library/logging.rst:229 ../Doc/library/logging.rst:1008
 msgid ""
@@ -466,30 +481,41 @@ msgid ""
 "likely that specialized :class:`Formatter`\\ s would be used with "
 "particular :class:`Handler`\\ s."
 msgstr ""
+"Si bien esto puede ser molesto, esta función está diseñada para su uso en "
+"circunstancias especializadas, como servidores de subprocesos múltiples "
+"donde el mismo código se ejecuta en muchos contextos, y las condiciones "
+"interesantes que surgen dependen de este contexto (como la dirección IP del "
+"cliente remoto y autenticado nombre de usuario, en el ejemplo anterior). En "
+"tales circunstancias, es probable que se especialice :class:`Formatter`\\ s "
+"con particular :class:`Handler`\\ s."
 
 #: ../Doc/library/logging.rst:236 ../Doc/library/logging.rst:1015
 msgid "The *stack_info* parameter was added."
-msgstr ""
+msgstr "Se agregó el parámetro ``stack_info``."
 
 #: ../Doc/library/logging.rst:239
 msgid "The *exc_info* parameter can now accept exception instances."
-msgstr ""
+msgstr "El parámetro ``exc_info`` ahora puede aceptar instancias de excepción."
 
 #: ../Doc/library/logging.rst:242
 msgid "The *stacklevel* parameter was added."
-msgstr ""
+msgstr "Se agregó el parámetro ``stacklevel``."
 
 #: ../Doc/library/logging.rst:248
 msgid ""
 "Logs a message with level :const:`INFO` on this logger. The arguments are "
 "interpreted as for :meth:`debug`."
 msgstr ""
+"Registra un mensaje con el nivel :const:`INFO` en este registrador. Los "
+"argumentos se interpretan como :meth:`debug`."
 
 #: ../Doc/library/logging.rst:254
 msgid ""
 "Logs a message with level :const:`WARNING` on this logger. The arguments are "
 "interpreted as for :meth:`debug`."
 msgstr ""
+"Registra un mensaje con el nivel :const:`WARNING` en este registrador. Los "
+"argumentos se interpretan como :meth:`debug`."
 
 #: ../Doc/library/logging.rst:257
 msgid ""
@@ -497,24 +523,33 @@ msgid ""
 "``warning``. As ``warn`` is deprecated, please do not use it - use "
 "``warning`` instead."
 msgstr ""
+"Hay un método obsoleto ``warn`` que es funcionalmente idéntico a "
+"``warning``. Como ``warn`` está en desuso, no lo use, use ``warning`` en su "
+"lugar."
 
 #: ../Doc/library/logging.rst:263
 msgid ""
 "Logs a message with level :const:`ERROR` on this logger. The arguments are "
 "interpreted as for :meth:`debug`."
 msgstr ""
+"Registra un mensaje con nivel :const:`ERROR` en este registrador. Los "
+"argumentos se interpretan como :meth:`debug`."
 
 #: ../Doc/library/logging.rst:269
 msgid ""
 "Logs a message with level :const:`CRITICAL` on this logger. The arguments "
 "are interpreted as for :meth:`debug`."
 msgstr ""
+"Registra un mensaje con el nivel :const:`CRITICAL` en este registrador. Los "
+"argumentos se interpretan como :meth:`debug`."
 
 #: ../Doc/library/logging.rst:275
 msgid ""
 "Logs a message with integer level *level* on this logger. The other "
 "arguments are interpreted as for :meth:`debug`."
 msgstr ""
+"Registra un mensaje con nivel entero ``nivel`` en este registrador. Los "
+"otros argumentos se interpretan como :meth:`debug`."
 
 #: ../Doc/library/logging.rst:281
 msgid ""
@@ -522,14 +557,18 @@ msgid ""
 "interpreted as for :meth:`debug`. Exception info is added to the logging "
 "message. This method should only be called from an exception handler."
 msgstr ""
+"Registra un mensaje con nivel :const:`ERROR` en este registrador. Los "
+"argumentos se interpretan como :meth:`debug`. La información de excepción se "
+"agrega al mensaje de registro. Este método solo debe llamarse desde un "
+"controlador de excepciones."
 
 #: ../Doc/library/logging.rst:288
 msgid "Adds the specified filter *filter* to this logger."
-msgstr ""
+msgstr "Agrega el filtro ``filtro`` especificado a este registrador."
 
 #: ../Doc/library/logging.rst:293
 msgid "Removes the specified filter *filter* from this logger."
-msgstr ""
+msgstr "Elimina el filtro ``filtro`` especificado de este registrador."
 
 #: ../Doc/library/logging.rst:298
 msgid ""
