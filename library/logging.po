@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Python 3.8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-05 12:54+0200\n"
-"PO-Revision-Date: 2020-06-03 10:28-0500\n"
+"PO-Revision-Date: 2020-06-04 12:26-0500\n"
 "Language-Team: python-doc-es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -949,6 +949,8 @@ msgid ""
 "The useful mapping keys in a :class:`LogRecord` are given in the section on :"
 "ref:`logrecord-attributes`."
 msgstr ""
+"Las claves de mapeo útiles en a :class:`LogRecord` se dan en la sección "
+"sobre :ref:`logrecord-attributes`."
 
 #: ../Doc/library/logging.rst:534
 #, python-format
@@ -959,6 +961,12 @@ msgid ""
 "specified, ``'%(message)s'`` is used.  If no *datefmt* is specified, a "
 "format is used which is described in the :meth:`formatTime` documentation."
 msgstr ""
+"Devuelve una nueva instancia de :class:`Formatter`. La instancia se "
+"inicializa con una cadena de formato para el mensaje en su conjunto, así "
+"como una cadena de formato para la porción fecha/hora de un mensaje. Si no "
+"se especifica *fmt*, se utiliza ``'%(message)s'``. Si no se especifica "
+"*datefmt*, se utiliza un formato que se describe en la documentación :meth:"
+"`formatTime`."
 
 #: ../Doc/library/logging.rst:540
 #, python-format
@@ -968,10 +976,15 @@ msgid ""
 "`str.format` or :class:`string.Template`. See :ref:`formatting-styles` for "
 "more information on using {- and $-formatting for log messages."
 msgstr ""
+"El parámetro *style* puede ser uno de '%', '{'' o '$' y determina cómo se "
+"fusionará la cadena de formato con sus datos: usando uno de %-formatting, :"
+"meth:`str.format` o :class:`string.Template`. Ver :ref:`formatting-styles` "
+"para obtener más información sobre el uso de {- y $ -para formateo de los "
+"mensajes de registro."
 
 #: ../Doc/library/logging.rst:545
 msgid "The *style* parameter was added."
-msgstr ""
+msgstr "Se agregó el parámetro *style*."
 
 #: ../Doc/library/logging.rst:548
 #, python-format
@@ -980,6 +993,9 @@ msgid ""
 "will raise a ``ValueError``. For example: ``logging.Formatter('%(asctime)s - "
 "%(message)s', style='{')``."
 msgstr ""
+"Se agregó el parámetro *validate*. Si el estilo es incorrecto o no "
+"coincidente, fmt generará un ``ValueError``. Por ejemplo: ``logging."
+"Formatter('%(asctime)s - %(message)s', style='{')``."
 
 #: ../Doc/library/logging.rst:555
 msgid ""
@@ -998,12 +1014,30 @@ msgid ""
 "formatting, so that the next formatter to handle the event doesn't use the "
 "cached value but recalculates it afresh."
 msgstr ""
+"El diccionario de atributos del registro se usa como el operando de una "
+"operación para formateo de cadenas. Devuelve la cadena resultante. Antes de "
+"formatear el diccionario, se llevan a cabo un par de pasos preparatorios. El "
+"atributo *message* del registro se calcula usando *msg* % *args*. Si el "
+"formato de la cadena contiene ``'(asctime)'``, :meth:`formatTime` es llamado "
+"para dar formato al evento. Si hay información sobre la excepción, se "
+"formatea usando :meth:`formatException` y se adjunta al mensaje. Tenga en "
+"cuenta que la información de excepción formateada se almacena en caché en el "
+"atributo *exc_text*. Esto es útil porque la información de excepción se "
+"puede *pickled* y propagarse en el cable, pero debe tener cuidado si tiene "
+"más de una subclase :class:`Formatter` que personaliza el formato de la "
+"información de la excepción. En este caso, tendrá que borrar el valor "
+"almacenado en caché después de que un formateador haya terminado su "
+"formateo, para que el siguiente formateador que maneje el evento no use el "
+"valor almacenado en caché sino que lo recalcule."
 
 #: ../Doc/library/logging.rst:571
 msgid ""
 "If stack information is available, it's appended after the exception "
 "information, using :meth:`formatStack` to transform it if necessary."
 msgstr ""
+"Si la información de la pila está disponible, se agrega después de la "
+"información de la excepción, usando :meth:`formatStack` para transformarla "
+"si es necesario."
 
 #: ../Doc/library/logging.rst:577
 #, python-format
@@ -1018,6 +1052,15 @@ msgid ""
 "An example time in this format is ``2003-01-23 00:29:50,411``.  The "
 "resulting string is returned."
 msgstr ""
+"Este método debe ser llamado desde :meth:`format` por un formateador que "
+"espera un tiempo formateado . Este método se puede reemplazar en "
+"formateadores para proporcionar cualquier requisito específico, pero el "
+"comportamiento básico es el siguiente: if *datefmt* (una cadena), se usa "
+"con :func:`time.strftime` para formatear el tiempo de creación del registro "
+"De lo contrario, se utiliza el formato '%Y-%m-%d %H:%M:%S,uuu', donde la "
+"parte uuu es un valor de milisegundos y las otras letras son :func:`time."
+"strftime` . Un ejemplo de tiempo en este formato es ``2003-01-23 "
+"00:29:50,411``. Se devuelve la cadena resultante."
 
 #: ../Doc/library/logging.rst:587
 msgid ""
@@ -1028,6 +1071,13 @@ msgid ""
 "change it for all formatters, for example if you want all logging times to "
 "be shown in GMT, set the ``converter`` attribute in the ``Formatter`` class."
 msgstr ""
+"Esta función utiliza una función configurable por el usuario para convertir "
+"el tiempo de creación en una tupla. Por defecto, se utiliza :func:`time."
+"localtime`; Para cambiar esto para una instancia de formateador particular, "
+"se agrega el atributo ``converter`` en una función con igual firma como :"
+"func:`time.localtime` o :func:`time.gmtime`. Para cambiarlo en todos los "
+"formateadores, por ejemplo, si desea que todos los tiempos de registro se "
+"muestren en GMT, agregue el atributo ``converter`` en la clase ``Formatter``."
 
 #: ../Doc/library/logging.rst:595
 #, python-format
