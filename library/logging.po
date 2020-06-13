@@ -322,7 +322,7 @@ msgstr ""
 "determinado por el sufijo. Por lo tanto, ``logging.getLogger('abc')."
 "getChild('def.ghi')`` devolvería el mismo registrador que devolvería "
 "``logging.getLogger('abc.def.ghi')``. Este es un método convenientemente "
-"útil cuando el registrador principal se nombra usando e.j. `` __name__`` en "
+"útil cuando el registrador principal se nombra usando e.j. ``__name__`` en "
 "lugar de una cadena literal."
 
 #: ../Doc/library/logging.rst:158
@@ -1116,7 +1116,7 @@ msgstr ""
 "Formatea la información de una excepción especificada (una excepción como "
 "una tupla estándar es devuelta por :func:`sys.exc_info`) como una cadena. "
 "Esta implementación predeterminada solo usa :func:`traceback."
-"print_exception`. La cadena resultantees devuelta."
+"print_exception`. La cadena resultantes devuelta."
 
 #: ../Doc/library/logging.rst:617
 msgid ""
